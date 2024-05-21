@@ -118,13 +118,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_BASE = BASE_DIR / "staticfiles"
-REACT_JS_BUILD_DIR = STATICFILES_BASE / "frontend" / "prod" 
+REACT_JS_BUILD_DIR = STATICFILES_BASE / "frontend" / "prod" / "assets"
 
 if DEBUG:
-    REACT_JS_BUILD_DIR = STATICFILES_BASE / "frontend" / "dev"
+    REACT_JS_BUILD_DIR = STATICFILES_BASE / "frontend" / "dev" / "assets"
 
 STATICFILES_DIRS = [
-    REACT_JS_BUILD_DIR,  # Include the React build directory
+    # REACT_JS_BUILD_DIR,  # Include the React build directory
+    STATICFILES_BASE
 ]
 
 STATIC_ROOT = BASE_DIR / "static_root"
