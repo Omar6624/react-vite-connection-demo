@@ -1,0 +1,4 @@
+.venv
+dj-backend/staticfiles
+# ignore all nested __pycache__ directories
+**/_pycache__
